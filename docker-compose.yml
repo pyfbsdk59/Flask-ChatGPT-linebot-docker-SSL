@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  web:
+    build: ./
+    volumes:
+      - ./app:/app
+    #ports:
+      #- "80:80"
+    environment:
+      - FLASK_APP=main.py
+      - FLASK_DEBUG=1
+      - 'RUN=flask run --host=0.0.0.0 --port=80'
+      - VIRTUAL_HOST=chatgptlinebot59.zapto.org
+      - LETSENCRYPT_HOST=chatgptlinebot59.zapto.org
+      - VIRTUAL_PORT=80
+      - LETSENCRYPT_EMAIL=igveri59@gmail.com
+    command: flask run --host=0.0.0.0 --port=80
+    #expose:
+      #- 8080
+networks:
+   default:
+     external:
+       name: proxy
+volumes:
+  data-volume:
+
