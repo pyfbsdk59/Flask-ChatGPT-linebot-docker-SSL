@@ -11,10 +11,10 @@ services:
       - FLASK_APP=main.py
       - FLASK_DEBUG=1
       - 'RUN=flask run --host=0.0.0.0 --port=80'
-      - VIRTUAL_HOST=chatgptlinebot59.zapto.org
-      - LETSENCRYPT_HOST=chatgptlinebot59.zapto.org
+      - VIRTUAL_HOST= "your Flask Website URL"
+      - LETSENCRYPT_HOST= "your Flask Website URL"
       - VIRTUAL_PORT=80
-      - LETSENCRYPT_EMAIL=igveri59@gmail.com
+      - LETSENCRYPT_EMAIL= "your noip registered email"
     command: flask run --host=0.0.0.0 --port=80
     #expose:
       #- 8080
