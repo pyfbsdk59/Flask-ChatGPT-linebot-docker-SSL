@@ -12,3 +12,8 @@ do2:
 	pyenv global miniconda3-4.3.30
 
 	pip install docker-compose
+dcup:
+	docker-compose up -d --build
+dcdown:
+	docker-compose down
+
