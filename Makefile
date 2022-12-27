@@ -12,9 +12,3 @@ do2:
 	pyenv global miniconda3-4.3.30
 
 	pip install docker-compose
-do3:
-	docker-compose run python sh -c "python3 manage.py makemigrations"
-
-	docker-compose run python sh -c "python3 manage.py migrate"
-
-	docker-compose run python sh -c "python3 manage.py createsuperuser"
